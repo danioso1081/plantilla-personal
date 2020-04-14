@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Life DaniLes</title>
+
+<style>
+/* Colores del sitio 
+#15609B Fondo
+#15809B Pleca menu
+*/
+
+ 
+ /*Neutralidad*/
+ body, header, menu, html, h1, article, section, footer, nav{
+     margin: 0;
+     padding: 0;
+ }
+
+header, menu, article, aside, nav, footer{
+    display: block;
+}
+
+/*Estructura*/
+
+body{
+    width: 913px;
+    margin-top: 0;
+    margin-left: 40px;
+    background: #15609B;
+}
+
+header{
+    width: 220px;
+    height: 171px;
+    }
+
+menu{
+    width: 913px;
+    height: 63px;
+    background-color: #15809B;
+}
+
+section{
+    height: 850px;
+    background-color: #136084;
+}
+
+article{
+    height: 529px;
+    width: 700px;
+    float: left;
+    padding-left: 2em;
+    padding-top: 2em;
+}
+
+aside{
+    height: 529px;
+    width: 140px;
+    float: right;
+    margin-right: 40px;
+}
+
+footer{
+    height: 100px;
+    background: #15809B;
+}
+
+/*Estilos */
+
+nav{
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    padding-top: .5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul, li{
+    display: inline;
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+footer{
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .5em;
+    color: #0757E8;
+}
+
+h1{
+    padding-top: 3em;
+    }
+
+/*Clases*/
+.inicio{
+    margin-top: 37px;
+    margin-bottom: 30px;
+}
+
+.medio{
+    margin-top: 30px;
+}
+
+.final{
+    margin-top: 30px;
+    margin-bottom: 37px;
+}
+.marco{
+    border: 15px solid #06476A ;
+}
+
+/*Seudo Clase*/
+
+a:hover{
+    color: #067181;
+}
+
+a:visited{
+    color: green;
+}
+
+
+
+
+</style>
+<script src="script/jquery-3.5.0.min.js"></script> 
+<script>
+    function cambiarFlor(nombre){
+        var archivo = "images/" + nombre + "_G.jpg";
+
+        console.log("NOMBRE RECIBIDO: " + nombre)
+
+        document.getElementById("imagen_grande").src=archivo;
+
+        var Contenido = [];
+        Contenido["Datos"] = "<p>Nombre: Leslie Daniela Osorio Ramos<br>" +
+            "Telefono: 5534229516 <br>" +
+            "Email: danioso1081@gmail.com <br>" +
+            "Tengo 18 años. Estoy cursando el 5° Cuatrimestre de la Licenciatura en Mercadotecnia. <br>" +
+            "Soy una persona alegre, amable y optimista; me gusta cantar y bailar, " +
+            "así como ayudar a las personas y a los perritos de la calle.</p>"
+        Contenido["Deportes"] = "<h1><b>¿Por qué me gusta?</b></h1>" +
+        "<p>Me gusta porque sus beneficios son físicos, de salud y psicológicos. " +
+        "En los beneficios físicos brinda mayor elasticidad, flexibilidad y quema grasas</p>"  +
+        "<p>En segundo plano mejora el sistema respiratorio, capacidad pulmonar, combate enfermedades crónicas " +
+        "y brinda beneficios psicológicos pues el cuerpo se relaja y reduce la sensación de estrés.";
+        Contenido["Lugar"] = "<h1><b>Sayulita, Riviera Nayarit</b></h1>" +
+        "<p>Sayilita  es una aldea en México en la costa del Pacifico. " +
+        "Es conocida por sus playas con fuerte oleaje, como la playa Sayulita central.</p>"  +
+        "<p>El surf es uno de sus principales atrativos de este poblado de tradiciónn pesquera," +
+        "al que llegan los amantes de este deporte de todos los rincones del mundo, como una cita sagrada," +
+        "con sus tabls a la espalda, su piel dorada y pasión por las aguas marinas";
+        Contenido["Libro"] = "<h1><b>La princesa de hielo, Camila Lackberg</b></h1>" +
+        "Tras muchos años de ausencia, la joven escritora Erica vuelve a su pueblo natal, donde ha heredado la casa de sus padres" +
+        "recientemente fallecidos. Erica decide darse un paseo por las calles donde transcurrió los primeros años de su vida," +
+        "pero tras el aviso de unos vecinos, descubre que su amiga de la infancia, Alex, acaba de suicidarse." +
+        "Conmocionada, inicia una investigación y descubre que Alex estaba embarazada." +
+        "La historia da un nuevo giro cuando la autopsia revela que su amiga no se suicidó sino que fue asesinada.";
+        Contenido["Musica"] = "<h1><b>Shakira</b></h1>" +
+        "Su alto nivel de ventas, versatilidad vocal y su éxito global la ha llevado a ser calificada por Sony Music y Billboard" +
+        "con el apodo de «Reina del pop latino». Diferentes conglomerados mediáticos la consideran un icono mundial de la cultura latina," +
+        "haciendo énfasis en la gran influencia que ha tenido en la escena musical, desde su debut en los años 90 hasta la actualidad," +
+        "siguiendo una carrera artística de más de 28 años se estima que ha vendido más de 75 millones de álbumes y sencillos.";
+
+        document.getElementById("info").innerHTML=Contenido[nombre];
+
+    }
+</script>
+</head>
+
+<body>
+<header>
+<img src="images/Logo_02.jpg" width="220" height="171">
+
+</header>
+
+<menu>
+
+    <nav>
+    
+    <ul>
+        <li> <a href="javascript:cambiarFlor('Datos')"> Datos </a> &nbsp; |</li>
+        <li> <a href="javascript:cambiarFlor('Deportes')"> Deporte </a> &nbsp; |</li>
+        <li> <a href="javascript:cambiarFlor('Lugar')"> Lugar </a> &nbsp; |</li>
+        <li> <a href="javascript:cambiarFlor('Libro')"> Libro </a> &nbsp; |</li>
+        <li> <a href="javascript:cambiarFlor('Musica')"> Cantante </a> &nbsp; |</li>
+
+    </ul>
+
+
+
+    </nav>
+
+</menu>   
+
+<section>
+
+    <article>
+    <img id="imagen_grande" src="images/Datos_G.jpg" width="550" height="528" class="marco"> 
+
+    </article>
+
+
+    <aside>
+        <img src="images/FotoCh_10.gif" width="140" height="90" class="inicio">
+        <img src="images/FotoCh_11.jpg" width="140" height="92">
+        <img src="images/FotoCh_17.gif" width="139" height="160" class="medio">
+        <img src="images/FotoCh_21.gif" width="140" height="155" class="final">
+        
+    </aside>
+    
+    <br><br><br>
+    <article id="info">
+        <p>Nombre: Leslie Daniela Osorio Ramos<br>
+            Telefono: 5534229516 <br>
+            Email: danioso1081@gmail.com <br>
+            Tengo 18 años. Estoy cursando el 5° Cuatrimestre de la Licenciatura en Mercadotecnia. <br>
+            Soy una persona alegre, amable y optimista; me gusta cantar y bailar, 
+            así como ayudar a las personas y a los perritos de la calle.</p>
+    </article>
+
+</section>
+
+
+
+<footer>
+
+<h1> Life DaniLes 2020 </h1>
+
+</footer>
+
+</body>
+
+</html>
